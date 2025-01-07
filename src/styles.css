@@ -9,6 +9,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Francheck';
     src: url('fonts/Franchek.ttf') format('truetype');
@@ -43,18 +51,28 @@ header a {
         font-style: normal;
         transition: 0.5s;
         cursor: pointer;
+        border: 2px solid transparent;
 }
+
+header a:hover{
+  transform: scale(1.05);
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px 2px #fff, inset 0px 0px 10px 2px #fff;
+}
+
 
 .logo {
     height: 200px;
     width: auto;
 }
 
-header button i {
+header .efeito-menu i {
     margin-right: 8px;
 }
 
-header button {
+header .efeito-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,15 +88,9 @@ cursor: pointer;
 transition: 0.2s;
 }
 
-header a:hover{
-    transform: scale(1.05);
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px 2px #fff, inset 0px 0px 10px 2px #fff;
-}
 
-header button:hover {
+
+header .efeito-menu:hover {
     transform: scale(1.05);
     background-color: #fff;
     color: #000;

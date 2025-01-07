@@ -22,5 +22,4 @@ revel.reveal(".efeito-fraselocal", { duration: 2000, distance: "200px"});
 
 
 
-revel.reveal(".", {duration: 2000, distance: "400px", origin: 'left'})
 
