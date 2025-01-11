@@ -26,24 +26,28 @@ html {
     src: url('fonts/Franchek.ttf') format('truetype');
 }
 
-.efeito-logo, .efeito-menu, .menua, .efeito-barber, .efeito-bololo, .efeito-pole1, .efeito-pole2, .efeito-central, .efeito-sobre, .efeito-retrato, .efeito-servico, .efeito-primeiro, .efeito-info, .efeito-servicos, .efeito-mapa, .efeito-fraselocal{
+.efeito-logo, .menua, .efeito-barber, .efeito-bololo, .efeito-pole1, .efeito-pole2, .efeito-central, .efeito-sobre, .efeito-retrato, .efeito-servico, .efeito-primeiro, .efeito-info, .efeito-servicos, .efeito-mapa, .efeito-fraselocal{
   visibility: hidden;
 }
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding:  10px 20px;
     background-color: #000;
     border-bottom: 7px solid #fff;
     box-shadow: 0 5px 15px #fff;
     position: relative;
 }
+
+.menu-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
   
 
-header a {
+header .menu-desktop a {
     text-decoration: none;
     font-size: 20px;
     color: #000;
@@ -58,7 +62,7 @@ header a {
         border: 2px solid transparent;
 }
 
-header a:hover{
+header .menu-desktop a:hover{
   transform: scale(1.05);
   background-color: #000;
   color: #fff;
@@ -72,36 +76,96 @@ header a:hover{
     width: auto;
 }
 
-header .efeito-menu i {
-    margin-right: 8px;
-}
 
-header .efeito-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    padding: 10px 15px;
-    border-radius: 15px;
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    font-family: "Righteous", serif;
-font-weight: 400;
-cursor: pointer;
-transition: 0.2s;
-}
-
-
-
-header .efeito-menu:hover {
-    transform: scale(1.05);
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px 2px #fff;
-}
   
+/* MOBILE */
+
+.btn-abrir-menu i {
+  color: #fff;
+  font-size: 40px;
+} 
+
+.overlay-menumobile {
+  background-color: #000000a9;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8888;
+  display: none;
+}
+
+
+.menu-mobile {
+  background-image: url('https://kartinki.pics/pics/uploads/posts/2022-08/1659545634_24-kartinkin-net-p-pattern-dlya-barbershopa-krasivo-32.jpg');
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 0%;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.btn-abrir-menu {
+  display: none;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menumobile {
+  display: block;
+}
+
+nav {
+  text-align: right;
+}
+
+.logomobile {
+  width: 250px;
+  height: auto;
+}
+
+.menu-mobile nav a {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 4%;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+      font-family: "Righteous", serif;
+      font-weight: 400;
+      font-style: normal;
+      transition: 0.5s;
+      cursor: pointer;
+      border: 2px solid transparent;
+}
+
+.menu-mobile nav a:hover {
+  transform: scale(1);
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow:  inset 0px 0px 5px 1px #fff;
+}
+
+
+.menu-mobile .btn-fechar {
+  padding: 20px 4%;
+}
+
+
+.menu-mobile .btn-fechar i {
+  color: #fff;
+  font-size: 30px;
+}
+
+
 section {
   height: 100vh;
 }
@@ -832,6 +896,35 @@ footer{
 }
 
 /* Responsividade */
+
+@media screen and (max-width: 1020px) {
+
+.menu-desktop {
+  display: none;
+}
+.menu-mobile, .btn-abrir-menu {
+  display: block;
+}
+
+.sobre-mim h3 {
+  font-size: 30px;
+}
+
+.sobre-mim h1 {
+  font-size: 40px;
+}
+
+.localizacao .info-mapa {
+  flex-direction: column;
+}
+
+.localizacao .info,
+.localizacao .mapa {
+  max-width: 100%;
+}
+}
+
+
 @media (max-width: 768px) {
   .localizacao .info-mapa {
     flex-direction: column;

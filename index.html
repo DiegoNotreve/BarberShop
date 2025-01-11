@@ -9,16 +9,43 @@
   <script src="https://unpkg.com/scrollreveal" defer></script>
   <script src="src/script.js" defer></script>
   <script src="src/revel.js" defer></script>
+  <script src="menu.js" defer></script>
 </head>
 <body>
   <header>
+    <div class="menu-desktop">
     <img class="logo  efeito-logo" src="img/logonova (2).png" alt="logomarca">
 
    <a class="menua" href="#eu">Sobre mim</a>
    <a class="menua" href="#projeto">Serviços</a>
    <a class="menua" href="#localizacao">Localização</a>
    <a class="menua" href="#">FAQ</a>
-   <a class="efeito-menu" href="#contato"> <i class="bi bi-whatsapp"></i>Social</a>
+   <a class="menua" href="#contato"> <i class="bi bi-whatsapp"></i>Social</a>
+
+  </div>
+
+
+
+<!--MENU MOBILE-->>
+    <div class="btn-abrir-menu" id="btn-menu">
+      <i class="bi bi-list"></i>
+    </div>
+    <div class="menu-mobile" id="menu-mobile">
+      <div class="btn-fechar">
+        <i class="bi bi-x-lg"></i>
+      </div>
+      <nav>
+      <a class="link-mob" href="#eu">Sobre mim</a>
+      <a class="link-mob" href="#projeto">Serviços</a>
+      <a class="link-mob" href="#localizacao">Localização</a>
+      <a class="link-mob" href="#">FAQ</a>
+      <a class="link-mob" href="#contato"></i>Social</a>
+      <img class="logomobile" src="img/logonova (2).png" alt="logomarca">
+    </nav>
+    </div>
+    <div class="overlay-menumobile" id="overlay-menumobile">
+
+    </div>
   </header>
 
   <section class="sobre-mim">
