@@ -237,7 +237,6 @@ section {
   justify-content: center;
   align-items: center;
   box-shadow: 0 1px 35px #fff;
-  height: auto;
 }
 
 
@@ -382,18 +381,13 @@ h2.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
- 
-  
+  flex-direction: column; 
 }
-
 .imagens {
   display: flex; 
   justify-content: center; 
   gap: 30px; 
 }
-
-
 
 .imagem-container {
   position: relative;
@@ -952,47 +946,129 @@ footer{
  }
 .about {
   padding: 40px 10px;
-  min-height: auto;
+  height: auto;
   overflow-y: auto;
 }
 
 .conteudo-central {
   flex-direction: column;
-  height: auto; /* Remove o limite de altura para a versão mobile */
+  height: auto;
   padding: 15px;
 }
 
 .texto-container {
-  align-items: center; /* Centraliza o texto para a versão mobile */
-  text-align: center; /* Garante que o texto esteja centralizado */
+  align-items: center;
+  text-align: center;
 }
 
 .texto-container p {
-  font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+  font-size: 1rem; 
 }
 
 h4.titulo-sobre {
-  font-size: 2rem; /* Ajusta o tamanho do título para mobile */
+  font-size: 2rem; 
 }
 
 .fotovito {
-  height: 300px; /* Ajusta a altura da foto para telas menores */
-  
+  height: 300px; 
 }
 
 .retrato p {
-  font-size: 18px; /* Ajusta o tamanho da legenda para o mobile */
+  font-size: 18px; 
 }
 
+/*SLIDER*/
+
+.slide-box,.primeiro {
+  height: auto; 
+}
+
+.servicos h1 {
+  font-size: 1.5rem;
+}
+
+.servicos i {
+  font-size: 25px;
+}
+
+.slide-box h2 {
+  font-size: 1.25rem;
+}
+
+.imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: 150px;
+}
+
+.nav-manual, .nav-auto {
+  position: absolute; /* Posiciona dentro do contexto da seção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-manual div {
+ margin: 0 auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.localizacao {
+  padding: 10px;
+  height: auto;
+}
+
+.localizacao .titulo {
+  font-size: 1.5rem; 
+}
 
 
 .localizacao .info-mapa {
-  flex-direction: column;
+  flex-direction: column; 
+  gap: 10px; 
 }
 
-.localizacao .info,
+.localizacao .info {
+  max-width: 90%; /* Expande o elemento para ocupar mais espaço no mobile */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px; /* Reduz o espaçamento interno */
+}
+
 .localizacao .mapa {
-  max-width: 100%;
+  max-width: 90%; /* Ajusta a largura do mapa */
+}
+
+.localizacao .mapa iframe {
+  width: 100%; /* Faz o mapa ocupar a largura do container */
+  height: 250px; /* Ajusta a altura para ficar proporcional */
+}
+
+.fraselocal {
+  height: auto; 
+  padding: 10px; 
+}
+
+p.descricao {
+  font-size: 1rem;
+}
+
+.redestitulo {
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 1.3rem;
+}
+
+.frasefinal p {
+  padding: 10px;
 }
 
 }
