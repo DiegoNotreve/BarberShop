@@ -924,8 +924,8 @@ footer{
 
 .sobre-mim h1 {
   font-size: 70px;
-  margin:  0;
   text-align: center;
+
 }
 
 .titulo img {
@@ -1071,20 +1071,16 @@ footer h2 {
   padding: 10px;
 }
 
+.nav-auto, .nav-manual {
+  margin-top: 155%;
+}
+
+
 }
 
 
 
-@media (max-width: 768px) {
-  .localizacao .info-mapa {
-    flex-direction: column;
-  }
-  
-  .localizacao .info,
-  .localizacao .mapa {
-    max-width: 100%;
-  }
-}
+
 
 
 
